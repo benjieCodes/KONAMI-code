@@ -1,7 +1,12 @@
-const input = [];
-const KonamiCode =
+const inputCode = [];
+const konamiCode =
   "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowLeftArrowRightArrowRightbabaEnter";
 
 window.addEventListener("keyup", e => {
-  console.log(e.key);
+  inputCode.push(e.key);
+  inputCode.splice(
+    -konamiCode.length - 1,
+    inputCode.length - konamiCode.length
+  );
+  console.log(inputCode);
 });

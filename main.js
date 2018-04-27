@@ -1,1 +1,3 @@
-console.log("hello");
+window.addEventListener("keyup", e => {
+  console.log(e.key);
+});
